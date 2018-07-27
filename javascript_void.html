@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript void</title>
+</head>
+<body>
+	<script>
+		function getValue()
+		{
+			var a,b,c;
+			a = void(b=5,c=7)
+			document.write("a = "+a+" b = "+b+" c = "+c);
+		}
+	</script>
+	<p>Click the following this not react all</p>
+	<a href="javascript:void(0)">Click me</a> 
+	<p>Click the following to see the result:</p>            
+	<form>         
+		<input type="button" value="Click Me" onclick="getValue();" />      
+	</form>
+</body>
+</html>
