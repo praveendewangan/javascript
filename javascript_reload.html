@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript Refresh</title>
+</head>
+<body>
+	<script>
+		function redirectme()
+		{
+			alert("redirecting the page");
+			window.location = location;
+		}
+		document.write("You will be redirecting in 10 seconds");
+		setTimeout(redirectme,1000);
+	</script>
+	<input type="button" value="Redirect me" onclick="redirectme()">
+</body>
+</html>
