@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>cookie</title>
+</head>
+<body>
+	<script>
+		/*Set cookie*/
+		function set_cookie()
+		{
+			if(document.cookie_form.cookie_name.value == "")
+				{
+					alert("please write cookie name");
+					return;
+				}
+			cookie_value = escape(document.cookie_form.cookie_name.value)+";";
+			document.cookie = "name="+cookie_value;
+			alert ("Setting Cookies : " + "name=" + cookie_value );
+		}
+		/*Read cookie*/   
+		function ReadCookie()            
+		{               
+			var allcookies = document.cookie;
+			alert(document.cookie);
+            alert("All Cookies : " + allcookies );
+			// Get all the cookies pairs in an array               
+			var cookiearray = allcookies.split(';'); 
+			// Now take key value pair out of this array               
+			for(var i=0; i<cookiearray.length; i++)
+			{                  
+				var name = cookiearray[i].split('=')[0];
+				var value = cookiearray[i].split('=')[1];
+				alert("Key is : " + name + " and Value is : " + value);               
+			}     
+		}         
+	</script>
+	<form name="cookie_form">
+		<input type="text" name="cookie_name">
+		<input type="button" onClick="set_cookie()" value="submit">
+	</form>
+	<form name="myform">         
+		<p> click the following button and see the result:</p>         
+		<input type="button" value="Get Cookie" onclick="ReadCookie()"/>      
+	</form>
+</body>
+</html>
