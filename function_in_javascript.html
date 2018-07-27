@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Function in javascript</title>
+</head>
+<body>
+	<script>
+		function hello()
+		{
+			alert("Hello dear!");
+		}
+		function name_age(name,age)
+		{
+			alert("Your name is "+ name + " and age is "+ age);
+		}
+		function concate(first, last)
+		{
+			var add = first+last;
+			return add;
+		}
+		function full_name()
+		{
+			var result = concate("Praveen", " Dewangan");
+			alert(result);
+		}
+	</script>
+	<p>Function without parameter</p>
+	<button onclick="hello()">Click here</button>
+	<p>Function with parameter</p>
+	<button onclick="name_age('praveen',22)">Your info</button>
+	<p>Function without parameter and return</p>
+	<button onclick="full_name()">Full name</button>
+</body>
+</html>
