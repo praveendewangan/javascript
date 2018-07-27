@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Switch statement</title>
+</head>
+<body>
+	<script>
+		//var operand1 = Number(prompt("Enter first value"));
+		//var operand2 = Number(prompt("Enter first value"));
+		var operand1 = +prompt("Enter first value");
+		var operand2 = +prompt("Enter first value");
+		//var operand1 = prompt("Enter first value");
+		//var operand2 = prompt("Enter first value");
+		var operator = prompt("Enter operator");
+		switch(operator)
+			{
+				case '+' : document.write("Addition of "+operand1+ " and " + operand2 + " is "+(operand1+operand2));
+						//document.write(parseInt(operand1)+parseInt(operand2));
+					break;
+					
+				case '-' : document.write("Substraction of "+operand1+ " and " + operand2 + " is " +(operand1-operand2));
+					break;
+					
+				case '*' : document.write("Multiplication of "+operand1 +"and" + operand2+ "is" +(operand1*operand2));
+					break;
+					
+				case '/' : document.write("division of "+operand1+ "and" + operand2 +"is" +(operand1/operand2));
+					break;
+					
+				default : document.write("Invalid input");
+					break;
+			}
+	</script>
+</body>
+</html>
