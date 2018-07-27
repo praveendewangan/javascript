@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript object</title>
+</head>
+<body>
+	<script>
+		/*How constructor creates an object*/
+		function book(title,price)
+		{
+			this.title = title;
+			this.price = price;
+		}
+		
+		var mybook = new book("Frustration of life",10);
+		document.write("Book title is "+mybook.title+" and price is $"+mybook.price);
+		document.write("<br/>");
+		
+		/*Method of an object*/
+		function addprice(amount)
+		{
+			this.price = amount;
+		}
+		function book1(title,author)
+		{
+			this.title = title;
+			this.author = author;
+			this.addprice = addprice;
+		}
+		var mybook1 = new book1("My life","Praveen");
+		mybook1.addprice(100);
+		document.write("Book title is "+mybook1.title+", price is $"+mybook1.price+" and the aurhor is "+mybook1.author);
+		
+		/*With keyword*/
+		function addprice2(amount)
+		{
+			with(this)
+				{
+					price = amount;	
+				}
+		}
+		function book2(title,author)
+		{
+			this.title = title;
+			this.author = author;
+			this.addprice = addprice;
+			this.price = 0;
+		}
+		var mybook2 = new book2("My life","Praveen");
+		mybook2.addprice(500);
+		document.write("<br/>");
+		document.write("Book title is "+mybook2.title+", price is $"+mybook2.price+" and the aurhor is "+mybook2.author);
+	</script>
+</body>
+</html>
