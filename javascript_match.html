@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>javascript match</title>
+	<style>
+		body
+		{
+			background: #ccc;
+		}
+		.container
+		{
+			width: 450px;
+			box-sizing: border-box;
+			height: 500px;
+			position: absolute;
+			top:50%;
+			left:50%;
+			transform: translate(-50%,-50%);
+			background: #162531;
+			color: white;
+			padding: 50px 10px 10px 10px;
+		}
+		#input
+		{
+			padding: 15px;
+			text-align: center;
+			width: 100%;
+			box-sizing: border-box;
+		}
+		input[type="submit"]
+		{
+			width: 100%;
+			padding: 15px;
+			box-sizing: border-box;
+			background: #51B5C9;
+			border: none;
+			outline: none;
+			margin-top: 20px;
+			text-transform: uppercase;
+		}
+		textarea
+		{
+			box-sizing: border-box;
+			padding: 20px;
+			width: 100%;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<input id="input" type="text" placeholder="Enter string with number and it will give you all numbers present in string"/>
+		<input type="submit" value="submit" onclick="process()"/>
+		<textarea id="textarea" cols="30" rows="5"></textarea>
+	</div>
+	<script>
+		function process()
+		{
+			document.getElementById("textarea").value ="";
+			var get_inputs = document.getElementById("input").value;
+			//var result = get_inputs.match(/\d/);//it gives first number only
+			//var result = get_inputs.match(/\d/g);//it will return value with comma seperated
+			var result = get_inputs.match(/\d/g);//it will return value without comma seperated
+			alert(typeof(result))
+			if(result != null)
+				{
+					for(var i=0;i<result.length;i++)
+						{
+							document.getElementById("textarea").value += result[i]+"\r\n";
+						}
+				}
+			//alert(result);
+		}
+	</script>
+</body>
+</html>
