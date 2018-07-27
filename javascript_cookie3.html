@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript cookie</title>
+</head>
+<body>
+	<input type="button" value="setCookie" onClick="set_cookie()">
+	<input type="button" value="getCookie" onClick="get_cookie()">
+	<script>
+		function set_cookie()
+		{
+			document.cookie = "name=praveen;max-age="+ (60*60*24*30)+";";
+		}
+		function get_cookie()
+		{
+			if(document.cookie.length != 0)
+				{
+					var getarray = document.cookie.split("=");
+					alert("Cookie name is "+getarray[0]+" and value is "+getarray[1]);
+				}
+			else
+			{
+				alert("No cookie exist");
+			}
+		}
+	</script>
+</body>
+</html>

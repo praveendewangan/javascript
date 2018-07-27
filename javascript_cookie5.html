@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript cookie</title>
+</head>
+<body>
+	<label>Name<input type="text" id="name"></label>
+	<label>Email<input type="text" id="email"></label>
+	<label>mobile<input type="text" id="mobile"></label>
+	<input type="button" value="setCookie" onClick="set_cookie()">
+	<input type="button" value="getCookie" onClick="get_cookie()">
+	<input type="button" value="clear" onClick="clear_input()">
+	<script>
+		function set_cookie()
+		{
+			document.cookie = "name="+document.getElementById("name").value;
+			document.cookie = "email="+document.getElementById("email").value;
+			document.cookie = "mobile="+document.getElementById("mobile").value;
+		}
+		function get_cookie()
+		{
+			if(document.cookie.length != 0)
+				{
+					var nameValueArray = document.cookie.split("; ");
+					for(var i=0;i<nameValueArray.length;i++)
+						{
+							var  cookieArray = nameValueArray[i].split("=");
+							if(cookieArray[0] == "name")
+								{
+									document.getElementById("name").value = cookieArray[1];
+								}
+							else if(cookieArray[0] == "email")
+								{
+									document.getElementById("email").value = cookieArray[1];
+								}
+							else if(cookieArray[0] == "mobile")
+								{
+									document.getElementById("mobile").value = cookieArray[1];
+								}
+						}	
+				}
+			else
+				{
+					alert("Cookie not found");
+				}
+			
+		}
+		function clear_input()
+		{
+			document.getElementById("name").value = "";
+			document.getElementById("email").value = "";
+			document.getElementById("mobile").value = "";
+		}
+	</script>
+</body>
+</html>
