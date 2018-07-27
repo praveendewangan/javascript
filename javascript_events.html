@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript events</title>
+</head>
+<body onoffline="myoffline()" >
+	<img id="image" src="../../HTML/images/mockup-psd-ipad-iphone-38639.jpeg" alt="tab_image" onclick="openFullScreen()" width="200px">
+	<p onmouseenter="myfunction1()" onmouseover="myfunction2()" id="para1" onselect="myselect()">Hello
+		<span onselect="myselect()">hello2</span>
+	</p>
+	<input type="text" onselect="myselect()" value="select me">
+	<script>
+		var x = document.getElementById("image");
+		function openFullScreen()
+		{
+			if(x.requestFullscreen)
+				{
+					x.requestFullscreen();
+				}
+			else if(x.mozRequestFullscreen)
+				{
+					x.mozRequestFullscreen();
+				}
+			else if(x.webkitRequestFullscreen)
+				{
+					x.webkitRequestFullscreen();
+				}
+			else if(x.msRequestFullscreen)
+				{
+					x.msRequestFullscreen();
+				}
+		}
+		function myfunction1()
+		{
+			var x = document.getElementById("para1");
+			x.style.color="green";
+		}
+		function myfunction2()
+		{
+			var x = document.getElementById("para1");
+			x.style.color="red";
+		}
+		function myoffline()
+		{
+			document.write("<br>You are offline<br>");
+		}
+		function myselect()
+		{
+			alert("you select some text");
+		}
+	</script>
+</body>
+</html>
