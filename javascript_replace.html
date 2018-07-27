@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>javascript replace</title>
+</head>
+<body>
+	<script>
+		var str1 = "welcome to javascript Tutorial,this tutorial is full of practice";
+		document.write(str1+"<br>");
+		var replace1 = str1.replace("javascript","HTML");
+		document.write("str1.replace('javascript','HTML') => "+str1.replace("javascript","HTML")+"<br>");
+
+		document.write("str1.replace('tutorial','2torial') => "+str1.replace("tutorial","2torial")+"<br>");//will replace first occurance
+
+		document.write("str1.replace(/tutorial/g,'2torial') => "+str1.replace(/tutorial/g,"2torial")+"<br>");//will replace all occurance
+
+		document.write("str1.replace(/tutorial/g,'2torial') => "+str1.replace(/tutorial/g,"2torial")+"<br>");//here it is case sensitive
+
+		document.write("str1.replace(/tutorial/gi,'2torial') => "+str1.replace(/tutorial/gi,"2torial")+"<br>");//here it is case insensitive
+	</script>
+</body>
+</html>
