@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>javascipt local compare</title>
+</head>
+<body>
+	<script>
+		var str1 = new String("a");
+		var str2 = str1.localeCompare("d");//-1
+		var str3 = 'b'.localeCompare("a");//1
+		var str4 = "a".localeCompare("a");//0
+		document.write("var str1 = new String('a')<br>");
+		document.write("str1.localeCompare('d') "+str2+"<br>");
+		document.write("'b'.localeCompare('a') "+str3+"<br>");
+		document.write("'a'.localeCompare('a') "+str4+"<br>");
+	</script>
+</body>
+</html>
