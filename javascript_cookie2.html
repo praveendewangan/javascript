@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>javascript_cookie</title>
+</head>
+<body>
+	<select id="select_color" onchange="set_color_cookie()">
+		<option value="no">Slect color</option>
+		<option value="dodgerblue">Blue</option>
+		<option value="green">Green</option>
+		<option value="aqua">Aqua</option>
+	</select>
+	<script>
+		window.onload = function()
+		{
+			if(document.cookie.length != 0)
+				{
+					var set_value_array = document.cookie.split("=");
+					document.bgColor = set_value_array[1];
+					alert(set_value_array[1]);
+					document.getElementById("select_color").value = set_value_array[1];
+				}
+		}
+		function set_color_cookie()
+		{
+			var set_color = document.getElementById("select_color").value;
+			if(set_color != "no")
+				{
+					document.bgColor = set_color;
+					document.cookie = "color=" + set_color + ";";
+				}
+		}
+	</script>
+</body>
+</html>
