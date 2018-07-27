@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>javascript array forEach</title>
+</head>
+<body>
+	<script>
+		function bigEnough(element,index,array)
+		{
+			document.write("<br>["+index+"] of "+element);
+		}
+		var result = [60,30,25,4,90].forEach(bigEnough);
+		var x = [];
+		[60,30,25,4,90].forEach(a => x.push(a));
+		document.write("<br>"+x);
+		
+	</script>
+</body>
+</html>
