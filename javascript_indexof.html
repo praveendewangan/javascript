@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>javascipt indexOf</title>
+</head>
+<body>
+	<script>
+		let str = new String("hey everyone, this is praveen");
+		document.write(str+"<br>")
+		document.write("<br>str.indexOf('h') "+str.indexOf("h"));
+		document.write("<br>str.indexOf('h') "+str.indexOf("h",1));
+		document.write("<br>str.indexOf('y') "+str.indexOf("y",3));
+		document.write("<br>str.indexOf('p') "+str.indexOf("p"));
+		/* If it not found a character, it will return -1*/
+		document.write("<br>str.indexOf('e') "+str.indexOf("e"));
+		let char_pos = str.indexOf("e");
+		let i = 0;
+		while(char_pos !== -1)
+			{
+				i++;
+				char_pos = str.indexOf("e",char_pos+1);
+			}
+		document.write("<br>count value : "+i);
+	</script>
+</body>
+</html>
